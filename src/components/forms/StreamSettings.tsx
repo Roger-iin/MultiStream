@@ -85,7 +85,7 @@ export default function StreamSettings({ isOpen, onClose }: StreamSettingsProps)
               htmlFor="youtube"
             >
               <YoutubeIcon />
-              Canal ou Vídeo do YouTube
+              Vídeo do YouTube
             </label>
             <input
               id="youtube"
@@ -99,8 +99,8 @@ export default function StreamSettings({ isOpen, onClose }: StreamSettingsProps)
             <div className="flex gap-1.5 p-2 bg-slate-950/50 rounded-lg text-[11px] text-slate-400 border border-slate-800/60">
               <Info className="w-3.5 h-3.5 text-violet-400 shrink-0 mt-0.5" />
               <span>
-                Para YouTube, recomendamos usar o <strong>Channel ID</strong> (UC...) ou o{' '}
-                <strong>Video ID</strong> da live atual para evitar limitações de embed por apelido.
+                Para YouTube, recomendamos usar o{' '} <strong>Video ID</strong> da live atual 
+                para evitar limitações de embed por apelido.
               </span>
             </div>
           </div>
