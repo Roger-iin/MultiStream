@@ -1,5 +1,6 @@
 {
   "name": "multistream",
+  "homepage": "https://roger-iin.github.io/MultiStream/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,9 +10,12 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "type-check": "tsc --noEmit",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "lucide-react": "^1.21.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
