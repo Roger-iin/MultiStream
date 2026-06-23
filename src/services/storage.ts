@@ -5,7 +5,7 @@ const MAIN_STREAM_KEY = 'multistream_main_stream'
 const LAYOUT_KEY = 'multistream_layout'
 
 const DEFAULT_CHANNELS: ChannelConfig = {
-  youtube: 'UCq54-RurqySGjGQjaac9JgA', // Gaules Channel ID (Gaules is the target from prompt example)
+  youtube: 'nsvvWSdITEs',
   twitch: 'gaules',
   kick: 'gaules',
 }
