@@ -92,14 +92,14 @@ export default function StreamSettings({ isOpen, onClose }: StreamSettingsProps)
               type="text"
               value={formState.youtube}
               onChange={(e) => handleChange('youtube', e.target.value)}
-              placeholder="Ex: UCq54-RurqySGjGQjaac9JgA (ID) ou dQw4w9WgXcQ (Vídeo)"
+              placeholder="Ex: dQw4w9WgXcQ (Vídeo)"
               className="w-full glass-input"
               required
             />
             <div className="flex gap-1.5 p-2 bg-slate-950/50 rounded-lg text-[11px] text-slate-400 border border-slate-800/60">
               <Info className="w-3.5 h-3.5 text-violet-400 shrink-0 mt-0.5" />
               <span>
-                Para YouTube, recomendamos usar o{' '} <strong>Video ID</strong> da live atual 
+                Para YouTube, recomendamos usar o{' '} <strong>Video ID</strong> da live atual
                 para evitar limitações de embed por apelido.
               </span>
             </div>
