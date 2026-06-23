@@ -59,15 +59,15 @@ export default function StreamGrid() {
   // preserving real pixel dimensions so the iframes keep playing inside.
   const secondaryStyle: React.CSSProperties = secondaryCollapsed
     ? {
-        position: 'fixed',
-        left: '-9999px',
-        top: '-9999px',
-        width: '720px',
-        height: '220px',
-        pointerEvents: 'none',
-        opacity: 0,
-        zIndex: -1,
-      }
+      position: 'fixed',
+      left: '-9999px',
+      top: '-9999px',
+      width: '720px',
+      height: '220px',
+      pointerEvents: 'none',
+      opacity: 0,
+      zIndex: -1,
+    }
     : {}
 
   return (
@@ -76,7 +76,7 @@ export default function StreamGrid() {
         // ── SIDEBAR: main left (72%), secondaries stacked right (28%) ──────
         <div className="flex flex-col lg:flex-row gap-3 w-full flex-1">
           {/* Main — tall, takes most of the viewport */}
-          <div className="flex-[3] min-h-[400px]" style={{ minHeight: '60vh' }}>
+          <div className="flex-4 min-h-[400px] h-[660px] " style={{ minHeight: '40vh' }}>
             {renderPlayer(mainStream, true)}
           </div>
 
@@ -106,7 +106,7 @@ export default function StreamGrid() {
               {secondaryPlatforms.map((platform) => (
                 <div
                   key={platform}
-                  className="flex-1 min-h-[140px]"
+                  className="flex-1 min-h-[140px] "
                   style={secondaryCollapsed ? { width: '360px', height: '220px' } : {}}
                 >
                   {renderPlayer(platform, false)}
@@ -120,11 +120,10 @@ export default function StreamGrid() {
         <div className="flex flex-col gap-3 w-full flex-1">
           {/* Main stream — dominant height */}
           <div
-            className="w-full rounded-xl overflow-hidden"
+            className="w-full rounded-xl overflow-hidden "
             style={{
-              height: secondaryCollapsed ? '82vh' : '68vh',
+              height: '95vh',
               minHeight: '380px',
-              transition: 'height 0.3s ease',
             }}
           >
             {renderPlayer(mainStream, true)}
@@ -155,13 +154,12 @@ export default function StreamGrid() {
             {/* Secondary players — always mounted, off-screen when collapsed */}
             <div
               className={secondaryCollapsed ? '' : 'flex flex-col sm:flex-row gap-3 w-full'}
-              style={secondaryCollapsed ? secondaryStyle : { height: '20vh', minHeight: '150px' }}
+              style={secondaryCollapsed ? secondaryStyle : { height: '60vh', minHeight: '150px' }}
             >
               {secondaryPlatforms.map((platform) => (
                 <div
                   key={platform}
-                  className="flex-1 min-w-0 h-full"
-                  style={secondaryCollapsed ? { width: '360px', height: '220px' } : {}}
+                  className="flex-1 min-w-0 h-full "
                 >
                   {renderPlayer(platform, false)}
                 </div>
